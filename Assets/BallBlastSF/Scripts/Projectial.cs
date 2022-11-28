@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectial : MonoBehaviour
@@ -8,8 +6,6 @@ public class Projectial : MonoBehaviour
     [SerializeField] private float lifeTime;
 
     private int damage;
-
-
 
     private void Start()
     {
@@ -30,7 +26,6 @@ public class Projectial : MonoBehaviour
             destructible.ApplyDamage(damage);
         }
         Destroy(gameObject);
-        
     }
 
     public void SetDamage(int damage)

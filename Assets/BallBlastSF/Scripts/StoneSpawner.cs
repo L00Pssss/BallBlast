@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -117,7 +115,6 @@ public class StoneSpawner : MonoBehaviour
     private float sizeZ;
     private int SizeStoneArray;
 
-  //  [SerializeField] public List<Stone> items;
     private void Spaw(bool Start)
     {
         if (Start == true)
@@ -130,10 +127,6 @@ public class StoneSpawner : MonoBehaviour
         stone.GetComponentInChildren<SpriteRenderer>().material.color = stoneColor[Random.Range(0, 4)];
         transform.position = new Vector3(transform.position.x, transform.position.y, sizeZ);
         sizeZ += 0.0001f;
-            // stone.ChangeColor(); рабочий варинт.
-
-
-
 
         stone.SetSize((Stone.Size)array[SizeStoneArray]);
 

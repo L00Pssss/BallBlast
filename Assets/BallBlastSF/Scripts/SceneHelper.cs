@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,21 +11,17 @@ public class SceneHelper : MonoBehaviour
         levelState = GetComponent<LevelState>();
     }
     public void RestartLevel()
-    {
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+    {  
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
     public void LoadLevel(int buildIndex)
-    {
-        
+    { 
         SceneManager.LoadScene(buildIndex);
     }
 
     public void LoadLevel()
     {
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Quit()

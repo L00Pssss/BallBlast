@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,7 +25,7 @@ public class Cart : MonoBehaviour
 
     private void Start()
     {
-        movementTarget = transform.position; // берется значение точки в начале. 
+        movementTarget = transform.position;
     }
 
     private void Update()
@@ -45,8 +43,6 @@ public class Cart : MonoBehaviour
             BonusImomortality = false;
             timer = 0;
         }
-
-
     }
     [SerializeField] private UIUpgrade uIUpgrade;
     private void OnTriggerEnter2D(Collider2D collision)

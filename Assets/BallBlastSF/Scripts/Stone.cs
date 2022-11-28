@@ -1,8 +1,4 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(StoneMovement))]
 public class Stone : Destructible
@@ -15,13 +11,11 @@ public class Stone : Destructible
         Huge
     }
 
-    [SerializeField] private Size size; // размер
+    [SerializeField] private Size size;
     [SerializeField] private float sizeZ = 0.0001f; 
     private StoneMovement movement;
 
     [SerializeField] private float spawUpForece;
-
-  //  [HideInInspector] public UnityEvent freezon;
     [SerializeField] public bool StopStone;
     [SerializeField] private float Timer = 0;
 
@@ -50,7 +44,6 @@ public class Stone : Destructible
     {
         Die.RemoveListener(OnStoneDestroyed);
         freez.FreezEvent.RemoveListener(Frezzq);
-
     }
     public void Frezzq()
     {
@@ -100,8 +93,6 @@ public class Stone : Destructible
         uILevelProgress.StoneProgress();
     }
 
-
-
     public void ChangeColor()
     {
 
@@ -133,7 +124,6 @@ public class Stone : Destructible
             ImmortalityCoin_Bonus immortalityBonus = Instantiate(immortalityCoinBonusPrefab, transform.position, Quaternion.identity);
         }
     }
- //   [SerializeField] public StoneSpawner stoneSpawner1;
     private void SpawnFrostCoinBonus()
     {
         chance = Random.Range(300, 401);
@@ -141,7 +131,6 @@ public class Stone : Destructible
         {
             FrostCoin frostBonus = Instantiate(FrostCoinBonusPrefab, transform.position, Quaternion.identity);
             frostBonus.freez = this.freez;
-        //    frostBonus.uIUpgrade = this.uIUpgrade;
         }
     }
 
@@ -156,8 +145,7 @@ public class Stone : Destructible
             stone.MaxHitPoint = Mathf.Clamp(MaxHitPoint / 2, 1, MaxHitPoint);
             stone.transform.position = new Vector3(transform.position.x, transform.position.y, sizeZ);
             stone.movement.SetHorizontalDirection((i % 2 * 2) - 1);
-            sizeZ += 0.0001f;
-            
+            sizeZ += 0.0001f;      
         }
     }
 

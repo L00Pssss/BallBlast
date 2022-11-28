@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoresCollector : MonoBehaviour
@@ -13,5 +11,4 @@ public class ScoresCollector : MonoBehaviour
 
         set { scores = value; }
     }
-
 }

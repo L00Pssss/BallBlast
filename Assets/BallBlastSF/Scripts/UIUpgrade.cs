@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIUpgrade : MonoBehaviour
@@ -19,27 +16,9 @@ public class UIUpgrade : MonoBehaviour
     [SerializeField] private GameObject TextPrefabStoneStop;
     [SerializeField] private GameObject TextPrefabImoratal;
 
-    //[HideInInspector] public UnityEvent StartEvent;
-
     public int SpeedCoin = 50;
     public int DamageCoin = 50;
     public int ProjectileCoin = 50;
-
-
-    //private void Awake()
-    //{
-    //    StartEvent.AddListener(UpdateStopStone);
-    //}
-
-    //private void OnDestroy()
-    //{
-    //    StartEvent.RemoveListener(UpdateStopStone);
-    //}
-
-    private void Start()
-    {
-    //    UIUpdate();
-    }
 
     private void Update()
     {

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -34,12 +31,6 @@ public class LevelState : MonoBehaviour
         cart.CollisionStone.AddListener(OnCartCollisionStone);
         Load();
     }
-
-    private void Start()
-    {
-        
-    }
-
 
     private void OnDestroy()
     {
@@ -97,20 +88,9 @@ public class LevelState : MonoBehaviour
                 if (FindObjectsOfType<Stone>().Length == 0)
                 {
                     Passed.Invoke();
-
-                    //if (chekSave == false && buttonNextLevel == true)
-                    //{
-                    //    CurrentLevel++;
-                    //    Save();
-                    //    chekSave = true;
-                    //}
                 }
             }
-
-
-
             timer = 0;
-
         }
 
 

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Coin : PikUp
 {
@@ -13,10 +10,9 @@ public class Coin : PikUp
        
         CartBag bag = collision.transform.root.GetComponent<CartBag>();
 
-        if (/*stone != true &&*/ bag != null)
+        if (bag != null)
         {
             bag.AddCoin(50);
-            //Debug.Log(bag.GetAmountKey());
         }
     }
 }

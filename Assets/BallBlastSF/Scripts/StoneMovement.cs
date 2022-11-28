@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-
 public class StoneMovement : MonoBehaviour
 {
     [SerializeField] private float gravity;
@@ -70,11 +69,4 @@ public class StoneMovement : MonoBehaviour
     {
         velocity.x = Mathf.Sign(direction) * horizontalSpeed;
     }
-
-    private float SizeZ;
-    //public void ChangePositionTransformZ()
-    //{
-
-        
-    //}
 }
